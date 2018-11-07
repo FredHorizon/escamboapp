@@ -29,9 +29,9 @@
 </head>
 
 <body>
-
+    <%= render partial: "layouts/site_shared/navigation" %> <!-- renderiza a navbar e sidebar -->
     <%= yield %>
-    
+    <%= render partial: "layouts/site_shared/footer" %> <!-- renderiza rodapé -->
 </body>
 
 </html>
