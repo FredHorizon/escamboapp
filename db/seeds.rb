@@ -21,3 +21,13 @@ categories.each do |category|
     Category.find_or_create_by!(description: category) # 'find_or_create_by' Evita que a categoria seja duplicada. Funciona como uma validação.
 end
 puts "CATEGORIAS cadastradas com sucesso!"
+
+###################
+
+puts "Cadastrando o ADMINISTRADOR Padrão..."
+
+Admin.create!(email: "admin@admin.com",
+              password: "123",
+              password_confirmation: "123")
+
+puts "ADMINISTRADOR cadastrado com sucesso!"
