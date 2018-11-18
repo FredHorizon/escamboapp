@@ -5,15 +5,19 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-# The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.
-gem 'rails-assets-bootstrap', '3.3.7', source: 'https://rails-assets.org'
-# A simple, versatile notification library
-gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
-# Faker
-gem 'faker'
-# Rails gem of the Bootstrap based admin theme SB Admin 2.
+
+source 'https://rails-assets.org' do
+  # The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web
+  gem 'rails-assets-bootstrap', '3.3.7'
+  # A simple, versatile notification library
+  gem 'rails-assets-notifyjs'
+  # Wrappers for JavaScript alert(), confirm() and other flexible dialogs using Twitter's bootstrap framework
+  gem 'rails-assets-bootbox'
+end
+
+# Rails gem of the Bootstrap based admin theme SB Admin 2
 gem 'bootstrap_sb_admin_base_v2'
-# Flexible authentication solution for Rails with Warden.
+# Flexible authentication solution for Rails with Warden
 gem 'devise'
 # Translations for the devise gem
 gem 'devise-i18n'
@@ -59,6 +63,9 @@ group :development, :test do
 end
 
 group :development do
+  # Faker
+  gem 'faker'
+
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
