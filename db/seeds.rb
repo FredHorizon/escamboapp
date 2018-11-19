@@ -30,7 +30,8 @@ Admin.create!(
     name: "AdmDefault",
     email: "admin@admin.com",
     password: "123",
-    password_confirmation: "123"
+    password_confirmation: "123",
+    role: 0
 )
 
 puts "ADMINISTRADOR cadastrado com sucesso!"

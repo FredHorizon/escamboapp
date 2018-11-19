@@ -8,7 +8,8 @@ namespace :utils do
         name: Faker::Name.name,
         email: Faker::Internet.email,
         password: "123",
-        password_confirmation: "123"
+        password_confirmation: "123",
+        role: [0,1].sample
       )
     end
 
