@@ -12,20 +12,20 @@ class Backoffice::CategoriesController < BackofficeController
   def create
     @category = CategoryService.create(params_category)
 
-    unless @category.errors.any? # a menos que tenha erro, faça isso aqui
-      redirect_to backoffice_categories_path, notice: "Categoria (#{@category.description}) criada com sucesso!"
+    unless @category.errors.any?
+      redirect_to backoffice_categories_path, notice: I18n.t('messages.created_with', item: @category.description)
     else
       render :new
     end
   end
 
   def edit
-
+    # Uses before_action to set the category
   end
 
   def update
     if @category.update(params_category)
-      redirect_to backoffice_categories_path, notice: "Categoria (#{@category.description}) atualizada com sucesso!"
+      redirect_to backoffice_categories_path, notice: I18n.t('messages.updated_with', item: @category.description)
     else
       render :edit
     end
@@ -38,6 +38,6 @@ class Backoffice::CategoriesController < BackofficeController
     end
 
     def params_category
-      (params.require(:category).permit(:description))
+      params.require(:category).permit(:description)
     end
 end
