@@ -1,1 +1,2 @@
-<%= render partial: "backoffice/categories/shared/form", locals: {action: "Editando categoria"} %>
+<%= render partial: "backoffice/categories/shared/form",
+           locals: {action_message: t('messages.editing', model: @category.model_name.human)} %>
