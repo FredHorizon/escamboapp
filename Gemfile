@@ -65,6 +65,9 @@ group :development, :test do
 end
 
 group :development do
+  # Catches mail and serves it through a dream.
+  gem 'mailcatcher'
+  
   # Faker
   gem 'faker'
 
