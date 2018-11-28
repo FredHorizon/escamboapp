@@ -1,3 +1,20 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @FredHorizon Sign out
+3
+20 20 jacksonpires/rails_completo_udemy_modulo3
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
+rails_completo_udemy_modulo3/db/schema.rb
+ec2357c  on 22 Nov 2016
+@jacksonpires jacksonpires Aula 053
+      
+74 lines (64 sloc)  3.13 KB
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -11,7 +28,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181118214243) do
+ActiveRecord::Schema.define(version: 20181128015211) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -36,10 +53,11 @@ ActiveRecord::Schema.define(version: 20181118214243) do
   create_table "ads", force: :cascade do |t|
     t.string   "title",       limit: 255
     t.text     "description"
-    t.integer  "category_id"
     t.integer  "member_id"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.integer  "category_id"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.integer  "price_cents",             default: 0
   end
 
   add_index "ads", ["category_id"], name: "index_ads_on_category_id"
@@ -70,3 +88,16 @@ ActiveRecord::Schema.define(version: 20181118214243) do
   add_index "members", ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true
 
 end
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Press h to open a hovercard with more details.
