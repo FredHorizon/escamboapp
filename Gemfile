@@ -23,6 +23,8 @@ gem 'enum_help'
 gem 'pundit'
 # Integration of RubyMoney - Money with Rails
 gem 'money-rails'
+# Easy file attachment management for ActiveRecord
+gem 'paperclip', '~> 5.0.0'
 # Flexible authentication solution for Rails with Warden
 gem 'devise'
 # Translations for the devise gem
@@ -60,7 +62,6 @@ group :development, :test do
 
   # Better error page for Rack apps
   gem "better_errors"
-  gem "binding_of_caller"
 
   # Generate Entity-Relationship Diagrams for Rails applications
   gem 'rails-erd'
