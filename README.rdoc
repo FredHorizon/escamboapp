@@ -4,4 +4,4 @@ Repositório do projeto "Escambo APP" desenvolvido no módulo 3 do curso de Ruby
 
 Curso completo no link abaixo.
 
->> [Ruby on Rails - Curso Completo](http://jacksonpires.blogspot.com.br/2016/05/novo-curso-de-rails-na-udemy.html)
+http://jacksonpires.blogspot.com.br/2016/05/novo-curso-de-rails-na-udemy.html
