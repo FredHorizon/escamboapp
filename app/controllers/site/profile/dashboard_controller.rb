@@ -1,5 +1,5 @@
-class Site::Profile::DashboardController < ApplicationController
+class Site::Profile::DashboardController < Site::ProfileController
     def index
-        #
+      #
     end
 end
