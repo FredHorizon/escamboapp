@@ -9,10 +9,14 @@ gem 'sqlite3'
 source 'https://rails-assets.org' do
   # The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web
   gem 'rails-assets-bootstrap', '3.3.7'
+  # Bootstrap Notify
+  gem 'rails-assets-bootstrap.growl'
   # A simple, versatile notification library
   gem 'rails-assets-notifyjs'
   # Wrappers for JavaScript alert(), confirm() and other flexible dialogs using Twitter's bootstrap framework
   gem 'rails-assets-bootbox'
+  # Animate CSS
+  gem 'rails-assets-animate-css'
 end
 
 # Rails gem of the Bootstrap based admin theme SB Admin 2
