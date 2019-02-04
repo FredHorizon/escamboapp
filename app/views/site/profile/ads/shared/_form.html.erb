@@ -40,7 +40,7 @@
       <div class="form-group">
         <%= f.label :price %>
         <div class="input-group">
-          <div class="input-group-addon">R$</div>
+          <div class="input-group-addon"><%= @ad.price.currency.symbol %></div>
             <%= f.text_field :price, class: "form-control", placeholder: "Título" %>
         </div>
       </div>
@@ -73,6 +73,21 @@
       <div class="form-group">
         <%= f.label :description %>
         <%= f.text_area :description, class: "form-control", rows: 10 %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="form-group">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Pré-Visualização
+            </div>
+            <div class="panel-body">
+                <%= md_to_html @ad.description %>
+            </div>
+        </div>
       </div>
     </div>
   </div>

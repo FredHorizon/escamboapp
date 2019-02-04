@@ -74,6 +74,8 @@ GEM
       warden (~> 1.2.3)
     devise-i18n (1.6.5)
       devise (>= 4.4)
+    doctor_ipsum (0.3.1)
+      i18n
     enum_help (0.0.17)
       activesupport (>= 3.0.0)
     erubi (1.7.1)
@@ -258,6 +260,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   devise-i18n
+  doctor_ipsum
   enum_help
   faker
   jbuilder (~> 2.0)
