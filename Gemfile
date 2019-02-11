@@ -17,6 +17,10 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootbox'
   # Animate CSS
   gem 'rails-assets-animate-css'
+  #Bootstrap Markdown
+  gem 'rails-assets-bootstrap-markdown'
+  # Marked
+  gem 'rails-assets-marked'
 end
 
 # Rails gem of the Bootstrap based admin theme SB Admin 2
