@@ -87,6 +87,8 @@ GEM
     ffi (1.9.25)
     font-awesome-rails (4.7.0.4)
       railties (>= 3.2, < 6.0)
+    friendly_id (5.2.5)
+      activerecord (>= 4.0.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (0.9.5)
@@ -266,6 +268,7 @@ DEPENDENCIES
   doctor_ipsum
   enum_help
   faker
+  friendly_id
   jbuilder (~> 2.0)
   jquery-rails
   jquery-ui-rails
