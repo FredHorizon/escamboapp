@@ -1,7 +1,7 @@
 class Site::AdDetailController < SiteController
 
-    def show
-      @ad = Ad.find(params[:id])
-    end
+  def show
+    @categories = Category.order_by_description
+    @ad = Ad.find(params[:id])
   end
-  
+end
