@@ -5,6 +5,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+# A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
+gem 'kaminari'
+# Translations for the kaminari gem
+gem  'kaminari-i18n'
 
 source 'https://rails-assets.org' do
   # The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web
