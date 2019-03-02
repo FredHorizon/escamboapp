@@ -14,6 +14,7 @@ namespace :dev do
     puts %x(rake dev:generate_admins)
     puts %x(rake dev:generate_members)
     puts %x(rake dev:generate_ads)
+    puts %x(rake dev:generate_comments)
 
     puts "Setup completado com sucesso!"
   end
@@ -28,8 +29,8 @@ namespace :dev do
       Admin.create!(
         name: Faker::Name.name,
         email: Faker::Internet.email,
-        password: "123",
-        password_confirmation: "123",
+        password: "123456",
+        password_confirmation: "123456",
         role: [0,0,1,1,1].sample
       )
     end
@@ -46,8 +47,8 @@ namespace :dev do
     100.times do
       Member.create!(
         email: Faker::Internet.email,
-        password: "123",
-        password_confirmation: "123"
+        password: "123456",
+        password_confirmation: "123456"
       )
     end
 
@@ -93,4 +94,22 @@ namespace :dev do
     %x(ruby -e "require 'doctor_ipsum'; puts DoctorIpsum::Markdown.entry")
   end
 
+  #################################################################
+
+  desc "Cria Comentários Fake"
+  task generate_comments: :environment do
+    puts "Cadastrando COMENTÁRIOS..."
+
+    Ad.all.each do |ad|
+      (Random.rand(3)).times do
+        Comment.create!(
+          body: Faker::Lorem.paragraph([1,2,3].sample),
+          member: Member.all.sample,
+          ad: ad
+        )
+      end
+    end
+
+    puts "COMENTÁRIOS cadastrados com sucesso!"
+  end
 end
